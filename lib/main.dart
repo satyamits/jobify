@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:jobify/controllers/exports.dart';
-import 'package:jobify/views/ui/onboarding/onboarding_screen.dart';
+import 'package:jobify/views/ui/mainscreen.dart';
 import 'package:provider/provider.dart';
 
 import 'views/common/exports.dart';
@@ -37,13 +37,13 @@ class MyApp extends StatelessWidget {
         builder: (context, child) {
           return GetMaterialApp(
             debugShowCheckedModeBanner: false,
-            title: 'Dbestech JobHub',
+            title: '',
             theme: ThemeData(
               scaffoldBackgroundColor: Color(kLight.value),
               iconTheme: IconThemeData(color: Color(kDark.value)),
               primarySwatch: Colors.grey,
             ),
-            home: const OnBoardingScreen(),
+            home: const MainScreen(),
           );
         });
   }

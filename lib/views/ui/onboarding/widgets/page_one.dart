@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:jobify/views/common/exports.dart';
+import 'package:jobify/constants/app_constants.dart';
+import 'package:jobify/views/common/app_style.dart';
 import 'package:jobify/views/common/height_spacer.dart';
+import 'package:jobify/views/common/reusable_text.dart';
 
 class PageOne extends StatelessWidget {
   const PageOne({super.key});
@@ -11,7 +13,7 @@ class PageOne extends StatelessWidget {
     return Scaffold(
       body: Container(
         width: width,
-        height: height,
+        height: hieght,
         color: Color(kDarkPurple.value),
         child: Column(
           children: [
@@ -23,16 +25,15 @@ class PageOne extends StatelessWidget {
             Column(
               children: [
                 ReusableText(
-                  text: 'Find Your Dream Company',
-                  style: appstyle(25, Color(kLight.value), FontWeight.w500),
-                ),
-                const HeightSpacer(size: 30),
+                    text: "Find Your Dream Job",
+                    style: appstyle(30, Color(kLight.value), FontWeight.w500)),
+                const HeightSpacer(size: 10),
                 Padding(
                   padding: EdgeInsets.symmetric(horizontal: 30.0.w),
                   child: Text(
-                    "We help you find your dream job according to your sillset, location and preference to build career",
+                    "We help you find your dream job according to your skillset, location and preference to build your career",
                     textAlign: TextAlign.center,
-                    style: appstyle(12, Color(kLight.value), FontWeight.normal),
+                    style: appstyle(14, Color(kLight.value), FontWeight.normal),
                   ),
                 )
               ],
